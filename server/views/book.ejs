@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, inital-scale=1.0">
+  <title>Learn JS | <%= title %></title>
+</head>
+<html>
+<body>
+  <nav>
+    <div class="site-title">
+      <a href="/"><h1>My Projects</h1></a> 
+    </div>
+    <u1>   
+      <a href="/">Homepage</a> 
+      <a href="/books">Book Log</a> 
+    </u1>
+  </nav>
+
+  <div class="add-book content">
+    <form>
+      <label for="title">Book Title</label>
+      <input type="text" id="title" required>
+      <label for="author">Author</label>
+      <input type="text" id="author" required>
+      <label for="rating">My Rating</label>
+      <input type="text" id="author" required>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class="book content">
+    <h2>All Books</h2>
+    <% if (books.length > 0) { %>
+      <% books.forEach(book => { %>
+
+        <h3 class="title"><%= book.title %></h3>
+        <p><%= book.author %></p>
+      <% }) %>
+    <% } %>
+  </div>
+</body>
+</html>
