@@ -1,0 +1,28 @@
+<%- include('./partials/head.ejs') %>
+<html>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="add-book content">
+    <form>
+      <label for="title">Book Title</label>
+      <input type="text" id="title" required>
+      <label for="author">Author</label>
+      <input type="text" id="author" required>
+      <label for="rating">My Rating</label>
+      <input type="text" id="author" required>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class="book content">
+    <h2>All Books</h2>
+    <% if (books.length > 0) { %>
+      <% books.forEach(book => { %>
+
+        <h3 class="title"><%= book.title %></h3>
+        <p><%= book.author %></p>
+      <% }) %>
+    <% } %>
+  </div>
+</body>
+</html>
